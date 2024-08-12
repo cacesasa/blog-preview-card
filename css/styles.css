@@ -1,0 +1,189 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Font family */
+@font-face{
+    font-family: 'Figtree';
+    src: url(../assets/fonts/Figtree-VariableFont_wght.ttf);
+
+    font-family: 'Figtree Italic';
+    src: url(../assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+/* Custom properties */
+:root {
+    --hover-highlight-color: hsl(47, 88%, 63%);
+    --primary-color-white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+
+    --paragraph-font-size: 14px;
+    --h1-font-size: 18px;
+    --small-font-size: 11px;
+
+    --desktop-paragraph-font-size: 16px;
+    --desktop-h1-font-size: 20px;
+    --desktop-small-font-size: 12px;
+
+    --font-family-figtree: 'Figtree', sans-serif;
+    --font-family-figtree-italic: 'Figtree Italic', sans-serif;
+}
+
+body{
+    background-color: var(--hover-highlight-color);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-figtree);
+    font-size: var(--paragraph-font-size);
+    line-height: 20px;
+}
+
+/* Mobile view */
+.card_wrapper{
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: var(--primary-color-white);
+    display: grid;
+    min-width: 327px;
+    max-width: 327px;
+    min-height: 501px;
+    max-height: 501px;    
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+    padding: 24px;
+}
+
+.card_image {
+    justify-self: center;
+    max-width: 279px;
+    max-height: 200px;
+    min-width: 279px;
+    min-height: 200px; 
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="336" height="201" fill="none" viewBox="0 0 336 201"><g clip-path="url(%23a)"><path fill="%23F4D04E" d="M0 .5h336v200H0z"/><rect width="139" height="95" x="87.996" y="77.729" fill="%23fff" rx="47.5" transform="rotate(-45 87.996 77.729)"/><rect width="139" height="95" x="54.055" y="77.729" fill="%23111" rx="47.5" transform="rotate(-45 54.055 77.729)"/><path fill="%23111" d="M234.864 209.036 451.4-7.5l67.175 67.175-216.536 216.536z"/><rect width="139" height="95" x="20.114" y="77.729" fill="%23fff" rx="47.5" transform="rotate(-45 20.114 77.729)"/><rect width="204.19" height="270.554" fill="%23111" rx="102.095" transform="scale(-1 1) rotate(45 -103.887 14.564)"/><path stroke="%23fff" stroke-width="3" d="m6.69-357.5 135.583 135.727c12.481 12.494 12.481 32.737 0 45.231L-45.544 11.475c-12.481 12.494-12.481 32.737 0 45.23L107.088 209.5"/><path stroke="%23111" stroke-width="3" d="M69.965 71.719v23.334h23.334M136.079 52.273V28.94h-23.334M102.845 38.838v46.67M210.364-37.5l60.873 60.873c12.497 12.496 12.497 32.758 0 45.254l-77.745 77.746c-12.497 12.496-12.497 32.758 0 45.254l69.872 69.873"/><path stroke="%23111" stroke-width="3" d="m253.339 149.574-12.144 12.145 14.256 14.257v12.672h12.673l13.729 13.729 12.145-12.145M278.685 124.228l-12.145 12.145 14.257 14.257v12.673h12.673l13.729 13.729 12.145-12.145M304.031 98.883l-12.145 12.144 14.257 14.257v12.673h12.673l13.729 13.729 12.144-12.145M329.376 73.537l-12.145 12.145 14.257 14.257v12.672h12.673l13.729 13.729 12.145-12.144"/><path stroke="%23fff" stroke-width="5" d="m354.722 48.191-12.145 12.145 14.257 14.257v12.673h12.673l13.729 13.729 12.145-12.145"/><mask id="b" width="285" height="285" x="234" y="-8" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="%23111" d="M234.864 209.036 451.4-7.5l67.175 67.175-216.536 216.536z"/></mask><g stroke="%23fff" mask="url(%23b)"><path stroke-width="3" d="m253.339 149.574-12.144 12.145 14.256 14.257v12.672h12.673l13.729 13.729 12.145-12.145M278.685 124.228l-12.145 12.145 14.257 14.257v12.673h12.673l13.729 13.729 12.145-12.145M304.031 98.883l-12.145 12.144 14.257 14.257v12.673h12.673l13.729 13.729 12.144-12.145M329.376 73.537l-12.145 12.145 14.257 14.257v12.672h12.673l13.729 13.729 12.145-12.145"/><path stroke-width="5" d="m354.722 48.191-12.145 12.145 14.257 14.257v12.673h12.673l13.729 13.729 12.145-12.145"/></g></g><defs><clipPath id="a"><path fill="%23fff" d="M0 .5h336v200H0z"/></clipPath></defs></svg> ');
+    border-radius: 10px;
+}
+
+.card_text  {
+    margin-top:12px
+}
+
+.card_text h1 {
+    font-size: var(--h1-font-size);
+    color: var(--gray-950);
+    font-weight: 800;
+}
+
+.card_learning {
+    min-width: 73px;
+    max-width: 73px;
+    max-height: 26px;
+    min-height: 26px;
+    background: var(--hover-highlight-color);
+    text-align: center;
+    line-height: 28px;
+    border-radius: 4px;
+    font-size: var(--small-font-size);
+    color: var(--gray-950);
+    font-weight: 800;
+}
+
+.card_date {
+    font-size: var(--small-font-size);
+    color: var(--gray-950);
+    font-weight: 400;
+}
+
+.card_aside img {
+    max-width: 32px;
+    min-width: 32px;
+}
+
+.card_aside {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card_aside p {
+    font-weight: 800;
+}
+
+/* Hover transition styles */
+.card:hover {
+    box-shadow: 16px 16px 0px 0px rgba(0,0,0,1);
+    & h1 {
+        color: var(--hover-highlight-color);
+        transition: ease-in-out 0.3s;
+    }
+    transition: ease-in-out 0.3s;
+}
+
+.card:focus {
+    box-shadow: 16px 16px 0px 0px rgba(0,0,0,1);
+    transition: ease-in-out 0.3s;
+    & h1 {
+        color: var(--hover-highlight-color);
+        transition: ease-in-out 0.3s;
+    }
+}
+
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+    .card {
+        display: grid;
+        min-width: 384px;
+        max-width: 384px;
+        min-height: 522px;
+        max-height: 522px;    
+    }
+
+    .card_image {
+        max-width: 336px;
+        max-height: 200px;
+        min-width: 336px;
+        min-height: 200px;
+    } 
+
+    .card_learning {
+        min-width: 82px;
+        max-width: 82px;
+        max-height: 29px;
+        min-height: 29px;
+        background: var(--hover-highlight-color);
+        text-align: center;
+        line-height: 29px;
+        border-radius: 4px;
+        font-size: var(--desktop-small-font-size);
+    }
+
+    .card_paragraph {
+        line-height: 26px;
+        font-size: var(--desktop-paragraph-font-size);
+    }
+    
+    .card_text  {
+        margin-top: 6px;
+    }
+
+    .card_date {
+        font-size: var(--desktop-small-font-size);
+    }
+
+    .card_text h1 {
+        font-size: var(--desktop-h1-font-size);
+    }    
+}
